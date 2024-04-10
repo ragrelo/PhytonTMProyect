@@ -24,6 +24,10 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" data-mutate-approach="sync"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
 </head>
 
 <body>
@@ -46,19 +50,19 @@
     </section>
 
     <main>
-        <section>
-            <div class="card">
-                <div class="card-header text-center">
+        <section class="row col-12 justify-content-center align-self-center">
 
-                    <button type="button" id="btnLoadBra" class="chi-button -primary -md "
-                        style="background-color: #007bff;" onclick="Addtask();"><i
+                <div class="card-header">
+
+                    <button type="button" id="btnLoadBra" class="btn btn-primary -md  "
+                        onclick="Addtask();"><i
                             class="icon-square-plus-outline"></i> &nbsp; Crear Tareas</button>
 
-                    <button type="button" id="btnLoadBra" class="chi-button -primary -md "
-                        style="background-color: #cc00ff;" onclick=" viewTaskSinAsignar('SinAsignar');"><i
+                    <button type="button" id="btnLoadBra" class="btn btn-secondary -md "
+                         onclick=" viewTaskSinAsignar('SinAsignar');"><i
                             class="icon-visible"></i> &nbsp;
                         Tareas Sin Asignar</button>
-                </div>
+
             </div>
         </section>
 
@@ -93,7 +97,7 @@
                 <a class="navbar-brand" href="#">Conferencias</a>
                 <a class="navbar-brand" href="#">Términos y Condiciones</a>
                 <a class="navbar-brand" href="#">Privacidad</a>
-                <a class="navbar-brand" href="#">Estudiantes</a>
+                <a class="navbar-brand"  href="./estudiantes.html">Estudiantes</a>
             </nav>
         </section>
     </footer>
@@ -325,11 +329,11 @@
     }*/
 
     var retorno = [
-    [63, 'Prueba 3 Tarea sin asignar', 'Prueba 3 Tarea sin asignar', '2024-03-25T18:24:58.000Z', null, '2024-04-03T19:47:03.000Z', 4, 6, 'MelanyA', null, null, null, null],
-  [61, 'Prueba 1 Tarea sin asignar', 'Prueba 1 Tarea sin asignar', '2024-03-25T18:24:16.000Z', '2024-03-26T03:00:00.000Z', '2024-03-31T03:00:00.000Z', 3, 5, 'MariaJoseP', null, null, null, null],
-  [81, 'Prueba de carga', 'otra mas', '2024-04-04T18:46:10.000Z', '2024-04-30T03:00:00.000Z', '2024-05-30T03:00:00.000Z', 1, 1, 'RomanA', null, null, null, null],
+    [63, 'Prueba 3 Tarea sin asignar', 'Prueba 3 Tarea sin asignar', '2024-03-25T18:24:58.000Z', null, '2024-04-03T19:47:03.000Z', 4, 6, 'ConradoG', null, null, null, null],
+  [61, 'Prueba 1 Tarea sin asignar', 'Prueba 1 Tarea sin asignar', '2024-03-25T18:24:16.000Z', '2024-03-26T03:00:00.000Z', '2024-03-31T03:00:00.000Z', 3, 5, 'FlorenciaR', null, null, null, null],
+  [81, 'Prueba de carga', 'otra mas', '2024-04-04T18:46:10.000Z', '2024-04-30T03:00:00.000Z', '2024-05-30T03:00:00.000Z', 1, 1, 'MatiasL', null, null, null, null],
   [83, '123123123', '123123123', '2024-04-04T20:49:05.000Z', null, null, 1, null, null, null, null, null, null],
-  [82, 'Prueba de carga', 'Prueba de carga111111', '2024-04-04T20:25:33.000Z', '2024-04-26T03:00:00.000Z', '2024-06-21T03:00:00.000Z', 1, 2, 'GuillermoR', null, null, null, null],
+  [82, 'Prueba de carga', 'Prueba de carga111111', '2024-04-04T20:25:33.000Z', '2024-04-26T03:00:00.000Z', '2024-06-21T03:00:00.000Z', 1, 2, 'FlorenciaR', null, null, null, null],
   [62, 'Prueba 2 Tarea sin asignar', 'Prueba 2 Tarea sin asignar', '2024-03-25T18:24:42.000Z', null, null, 2, 1, 'RomanA', 41, 62, 'A la espera de respuesta de operador telefonico.', '2024-04-03T21:24:54.000Z']
     ];
 
@@ -412,7 +416,7 @@
 
 
     function createCard(idUsuario, tareas) {
-        let card = `<div class="card m-1 text-bg-light col-1 card-header-PT">
+        let card = `<div class="card m-1 text-bg-light col-auto card-header-PT">
         <div class="card-header text-center">${idUsuario}</div>
         <div class="card-body">
             <b>Tareas:</b>
@@ -423,11 +427,11 @@
         <div class="card-footer text-center">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <div class="d-grid gap-1 d-md-flex justify-content-md-end ">
-                    <button class="btn btn-primary btn-sm" type="button" place-holder="Ver"
-                        onclick="viewTask('${idUsuario}');"><i class="icon-visible"></i></button>
+                    <button class="btn btn-primary -md" type="button" place-holder="Ver"
+                        onclick="viewTask('${idUsuario}');"><i class="fa-solid fa-eye"></i></button>
                         
-                        <button class="btn btn-primary btn-sm" type="button" place-holder="Cerradas" title="Cerradas"
-                        onclick="viewTaskClose('${idUsuario}');"><i class="icon-circle-check-outline"></i></button>
+                        <button class="btn btn-primary -md" type="button" place-holder="Cerradas" title="Cerradas"
+                        onclick="viewTaskClose('${idUsuario}');"><i class="fa-solid fa-thumbs-up"></i></button>
                 </div>
             </div>
         </div>
