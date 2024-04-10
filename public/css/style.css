@@ -269,7 +269,7 @@
         .card-header-PT {
             text-align: center;
             color:black;
-            background-color: red;
+            --background-color: red;
             padding: 10px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -278,4 +278,13 @@
 
         .border-card {
             border-color: cornflowerblue;
+        }
+        .cardModal{
+            margin: 1em;
+            --width: 100%;
+            border: 1rem;
+            /* Cambiamos esto a 80% para móviles */
+            background-color: beige;
+            border-radius: 5px;
+            --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
