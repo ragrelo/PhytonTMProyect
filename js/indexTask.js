@@ -1,5 +1,5 @@
 //cargo los datos fijos para poder modificar en memoria.
-var usuarios = allUsers;
+var usuarios = JSON.parse(localStorage.getItem('users'));
 var tareas = alltask;
 
 // si el usuario no esta loguado no puede hacer nada en la pagina
