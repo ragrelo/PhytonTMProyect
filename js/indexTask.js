@@ -258,7 +258,7 @@ function addNewTask() {
     // obtengo el id y sumo uno para agregar la proxima tarea
     var maxId = Math.max(...tareas.map(task => task[0]));
     var nextId = maxId + 1;
-    var fechaCreacion = formatFecha(new Date());
+    var fechaCreacion = new Date().toISOString();//formatFecha(new Date());
     if (addselectUsuario == '999') {
         alert('Debe seleccionar un usuario!');
         return;
@@ -296,7 +296,7 @@ function saveTask(id) {
     // obtengo el id y sumo uno para agregar la proxima tarea
     let maxId = Math.max(...tareas.map(task => task[idComentarioIndex]));
     let idcomentarioGenerado = maxId + 1;
-    let fechaComentario = new Date().toISOString();
+    //let fechaComentario = new Date().toISOString();
 
 
     // Modifica los campos
