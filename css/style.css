@@ -464,6 +464,21 @@ label {
     color: green;
 }
 
+.card-warning {
+    color: #000 !important;
+    background-color: yellow !important;
+}
+
+.card-success {
+    color: #fff !important;
+    background-color: green !important;
+}
+
+.card-danger {
+    color: #fff !important;
+    /* background-color: RGBA(var(--bs-danger-rgb), var(--bs-bg-opacity, 1)) !important; */
+    background-color: red !important;
+}
 
 /* Suplanta Boostrap*/
 .boton-top {

@@ -99,11 +99,11 @@ function generarTarjetas(datos) {
     for (let idTarea in tareas) {
         let color;
         if (tareas[idTarea][6] === 4) {
-            color = 'text-bg-danger'
+            color = 'card-danger'
         } else if (tareas[idTarea][6] === 3) {
-            color = 'text-bg-warning'
+            color = 'card-warning'
         } else {
-            color = 'text-bg-success'
+            color = 'card-success'
         };
 
         let task = createTask(tareas[idTarea], tareas[idTarea][8], tareas[idTarea].comentarios, color);
