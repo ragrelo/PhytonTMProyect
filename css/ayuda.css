@@ -50,3 +50,16 @@
 .img {
     width: 200px;
 }
+
+/* e incluyendo esto al css  */
+.contenido-acordeon {
+    display: none;
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon {
+    display: block;
+}
+
+.btn-acordeon:not(:checked) ~ .contenido-acordeon {
+    display: none;
+}

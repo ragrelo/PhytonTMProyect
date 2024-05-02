@@ -56,7 +56,7 @@
         <div class="contenedor-acordeon">
             <h2>Preguntas frecuentes sobre la pagina</h2>
             <div class="acordeon">
-                <input type="radio" name="acordeon" id="btn-acordeon1"
+                <input type="checkbox" name="acordeon" id="btn-acordeon1"
                     class="btn-acordeon">
                 <label for="btn-acordeon1">
                     ¿Como funciona Task manager?
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="acordeon">
-                <input type="radio" name="acordeon" id="btn-acordeon2"
+                <input type="checkbox" name="acordeon" id="btn-acordeon2"
                     class="btn-acordeon">
                 <label for="btn-acordeon2">
                     ¿Como comienzo a usar task manager?
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="acordeon">
-                <input type="radio" name="acordeon" id="btn-acordeon3"
+                <input type="checkbox" name="acordeon" id="btn-acordeon3"
                     class="btn-acordeon">
                 <label for="btn-acordeon3">
                     ¿Como puedo contactarme con ustedes?
@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div class="acordeon">
-                <input type="radio" name="acordeon" id="btn-acordeon4"
+                <input type="checkbox" name="acordeon" id="btn-acordeon4"
                     class="btn-acordeon">
                 <label for="btn-acordeon4">
                     ¿Quienes son ustedes?
@@ -195,6 +195,20 @@
     <script>
         $(window).on('load', function () {
             actualizarEstadoSesion();
+        });
+    </script>
+    <script>
+        const acordeonInputs = document.querySelectorAll('.acordeon input[type="checkbox"]');
+        acordeonInputs.forEach(input => {
+            input.addEventListener('click', () => {
+                if (input.checked) {
+                    acordeonInputs.forEach(otherInput => {
+                        if (otherInput !== input) {
+                            otherInput.checked = false;
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
