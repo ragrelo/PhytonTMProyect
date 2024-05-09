@@ -13,7 +13,7 @@ function guardoLocalStorage(usuarios) {
 function mostrarNombre() {
     var nombre = localStorage.getItem('nombre');
     if (!nombre) {
-        nombre = 'Anonimo, debe loguearse para poder operar'
+        nombre = 'debe loguearse para poder operar'
     }
     document.getElementById('nombre').textContent = nombre;
 };
