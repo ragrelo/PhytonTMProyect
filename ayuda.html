@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./imagenes/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/iconos/favicon-32x32.png">
 
     <!-- font-awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -29,16 +29,16 @@
     <title>Task Manager</title>
 </head>
 
-<body onload="mostrarNombre()">
+<body>
     <header>
         <section>
             <div>
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="./index.html">
-                            <img src="./imagenes/descarga.png" width="90" height="55">
+                            <img src="./img/descarga.png" width="90" height="55" alt="Logo">
                             <span class="titlePage">Task Manager - TP</span> </a>
-                        <div class="titlePage" id="menu">Hola <span id="nombre"></span></div>
+                        <!-- <div class="titlePage" id="menu">Hola <span id="nombre"></span></div> -->
                         <div class=" navbar-toggler-right">
                             <div class="navbar-nav me-2">
                                 <span><a class="nav-link" href="./index.html">Inicio</a></span>
@@ -73,7 +73,7 @@
                             <p> 1) Para empezar, simplemente presiona el botón
                                 'Crear Tarea'. <br>
                             <div>
-                                <img class="img" src="./imagenes/imagen2tp_Mesa de trabajo 1.png" alt>
+                                <img class="img" src="./img/imagen2tp_Mesa de trabajo 1.png" alt="">
                             </div>
                             <br>
                             <!--queria poner mas imagenes pero me falta esa parte de la web que no puedo ver-->
@@ -118,21 +118,21 @@
                             'Login'.</li>
                         <br>
                         <div>
-                            <img class="img" src="./imagenes/imagen3tp_Mesa de trabajo 1_Mesa de trabajo 1.png" alt="#">
+                            <img class="img" src="./img/imagen3tp_Mesa de trabajo 1_Mesa de trabajo 1.png" alt="">
                         </div>
 
                         <li>2) En la página de inicio de sesión, haz clic en
                             'Registro'.
                             <br>
                             <div>
-                                <img class="img" src="./imagenes/imagen4tp_Mesa de trabajo 1.png" alt="#">
+                                <img class="img" src="./img/imagen4tp_Mesa de trabajo 1.png" alt="">
                             </div>
                             <br>
                             Esto te llevará directamente a un
                             formulario de registro.
                         </li>
                         <div>
-                            <img class="img" src="./imagenes/imagen5tp_Mesa de trabajo 1.png" alt="">
+                            <img class="img" src="./img/imagen5tp_Mesa de trabajo 1.png" alt="">
 
                         </div>
                         <li>3) Completa el formulario con tus datos y una vez
@@ -189,7 +189,7 @@
     <footer class="footer">
         <a href="./estudiantes.html">Estudiantes</a>
         <a href="./contacto.html">Contáctanos</a>
-        <a href="#">Términos y Condiciones</a>
+        <a href="#" id="openTerms">Términos y Condiciones</a>
     </footer>
     <!-- Datos de Sesion -->
     <script src="./js/sesiones.js"></script>
@@ -214,6 +214,8 @@
             });
         });
     </script>
+    <!-- Terminos y condiciones -->
+    <script src="./js/terms.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ function deshabilitarBotones() {
 
     var botones = document.getElementsByTagName('button');
     if (nombre) {
-                for (var i = 0; i < botones.length; i++) {
+        for (var i = 0; i < botones.length; i++) {
             botones[i].disabled = false;
         }
     } else {
@@ -144,29 +144,29 @@ function createCard(idUsuario, tareas) {
 function createTask(tarea, usuario, comentarios, color) {
     // Crear las opciones del select con el valor seleccionado a
     let options = [{
-            value: '999',
-            text: 'Seleccionar'
-        },
-        {
-            value: '0',
-            text: 'Sin Asignar'
-        },
-        {
-            value: '1',
-            text: 'Asignada'
-        },
-        {
-            value: '2',
-            text: 'En Proceso'
-        },
-        {
-            value: '3',
-            text: 'En Espera'
-        },
-        {
-            value: '4',
-            text: 'Cerrado'
-        }
+        value: '999',
+        text: 'Seleccionar'
+    },
+    {
+        value: '0',
+        text: 'Sin Asignar'
+    },
+    {
+        value: '1',
+        text: 'Asignada'
+    },
+    {
+        value: '2',
+        text: 'En Proceso'
+    },
+    {
+        value: '3',
+        text: 'En Espera'
+    },
+    {
+        value: '4',
+        text: 'Cerrado'
+    }
     ].map(option =>
         `<option value="${option.value}" ${tarea[6] == option.value ? 'selected' : ''}>${option.text}</option>`
     ).join('');
@@ -206,7 +206,7 @@ function createTask(tarea, usuario, comentarios, color) {
                                         <option value="4">ConradoG</option>
                                         <option value="5">ConstanzaR</option>
                                      </select>`
-                    : ''}<div class="label-comentario text-left" for="selectStatus">Estado</div>
+            : ''}<div class="label-comentario text-left" for="selectStatus">Estado</div>
                         <select class="form-select form-select-sm col-12" id="selectStatus_${tarea[0]}">
                             ${options}
                         </select>
@@ -269,7 +269,7 @@ function addNewTask() {
     };
 
     //Agrego la tarea 
-    tareas.push([nextId, addNameTask, addtextDescripcion, fechaCreacion, null, null, addselectStatus, addselectUsuario, addselectUsuarioName, null, null, null, null], )
+    tareas.push([nextId, addNameTask, addtextDescripcion, fechaCreacion, null, null, addselectStatus, addselectUsuario, addselectUsuarioName, null, null, null, null],)
 
     closeModal();
     // Vaciar los contenedores de las tarjetas
