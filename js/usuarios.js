@@ -3,5 +3,4 @@ var allUsers = [
     [2, 'FlorenciaR'],
     [3, 'MatiasL'],
     [4, 'ConradoG'],
-    [5, 'ConstanzaR'],
 ];

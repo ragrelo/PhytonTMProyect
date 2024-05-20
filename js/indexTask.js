@@ -252,13 +252,13 @@ function addNewTask() {
     let addselectUsuarioName = select1.options[select1.selectedIndex].text;
     let select2 = document.getElementById("addselectStatus");
     let addselectStatus = Number(select2.options[select2.selectedIndex].value);
-    let datepicker1 = $("#datepicker1").val();
-    let datepicker2 = $("#datepicker2").val();
+    //let datepicker1 = $("#datepicker1").val();
+    //let datepicker2 = $("#datepicker2").val();
 
     // obtengo el id y sumo uno para agregar la proxima tarea
     var maxId = Math.max(...tareas.map(task => task[0]));
     var nextId = maxId + 1;
-    var fechaCreacion = new Date().toISOString();//formatFecha(new Date());
+    var fechaCreacion = new Date().toISOString();;
     if (addselectUsuario == '999') {
         alert('Debe seleccionar un usuario!');
         return;
@@ -282,11 +282,11 @@ function addNewTask() {
 
 function saveTask(id) {
     // Índices de los campos que quieres modificar
-    let estadoIndex = 6; // El índice del campo ESTADO en tus datos
-    let idComentarioIndex = 9; // El índice del campo ID_COMENTARIO en tus datos
-    let tareaIndex = 10; // El índice del campo TAREA en tus datos
-    let comentarioIndex = 11; // El índice del campo COMENTARIO en tus datos
-    let fechaComentarioIndex = 12; // El índice del campo FECHA_COMENTARIO en tus datos
+    let estadoIndex = 6; // El índice del campo ESTADO
+    let idComentarioIndex = 9; // El índice del campo ID_COMENTARIO
+    let tareaIndex = 10; // El índice del campo TAREA
+    let comentarioIndex = 11; // El índice del campo COMENTARIO
+    let fechaComentarioIndex = 12; // El índice del campo FECHA_COMENTARIO
 
     // nuevos valores
     let nuevoEstado = Number($(`#selectStatus_${id} option:selected`).val());
@@ -296,8 +296,6 @@ function saveTask(id) {
     // obtengo el id y sumo uno para agregar la proxima tarea
     let maxId = Math.max(...tareas.map(task => task[idComentarioIndex]));
     let idcomentarioGenerado = maxId + 1;
-    //let fechaComentario = new Date().toISOString();
-
 
     // Modifica los campos
     tareas.forEach(task => {
@@ -310,16 +308,6 @@ function saveTask(id) {
         }
     });
 
-    /*
-                       let addNameTask = $("#addNameTask").val();
-                       let addtextDescripcion = $("#addtextDescripcion").val();
-                       let select1 = document.getElementById("addselectUsuario");
-                       let addselectUsuario = select1.options[select1.selectedIndex].value;
-                       let addselectUsuarioName = select1.options[select1.selectedIndex].text;
-                       let select2 = document.getElementById("addselectStatus");
-                       let addselectStatus = Number(select2.options[select2.selectedIndex].value);
-                       tareas.push([idTarea, addNameTask, addtextDescripcion, fechaCreacion, null, null, addselectStatus, addselectUsuario, addselectUsuarioName, idcomentarioGenerado, idTarea, nuevoComentario, fechaComentario]);
-           */
     // Vaciar los contenedores de las tarjetas
     $('#tarjetasUsuarios').empty();
     $('#tareasUsuarios').empty();
@@ -353,12 +341,10 @@ function viewTask(idUsuario) {
     } else {
         tareas.show();
 
-        // Usa setTimeout para darle tiempo al navegador para renderizar las tarjetas
         setTimeout(function () {
-            // Desplaza hasta el final de la página
             var scrollPosition = $(document)[0].scrollHeight;
             $(window).scrollTop(scrollPosition);
-        }, 100); // Ajusta este valor según sea necesario
+        }, 100);
     }
 };
 
@@ -372,12 +358,10 @@ function viewTaskClose(idUsuario) {
         tareas.hide();
     } else {
         tareas.show();
-        // Usa setTimeout para darle tiempo al navegador para renderizar las tarjetas
         setTimeout(function () {
-            // Desplaza hasta el final de la página
             var scrollPosition = $(document)[0].scrollHeight;
             $(window).scrollTop(scrollPosition);
-        }, 100); // Ajusta este valor según sea necesario
+        }, 100); 
     }
 };
 
@@ -397,7 +381,7 @@ function viewTaskSinAsignar(idUsuario) {
 function formatFecha(fecha) {
     var fecha = new Date(fecha);
     var dia = fecha.getDate();
-    var mes = fecha.getMonth() + 1; // Los meses en JavaScript empiezan en 0
+    var mes = fecha.getMonth() + 1;
     var año = fecha.getFullYear();
     var hora = fecha.getHours();
     var minuto = fecha.getMinutes();

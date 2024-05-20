@@ -296,8 +296,13 @@ html {
     font-size: 16px;
 }
 
+.navbar-brand {
+    transition: 3s !important;
+}
+
 .navbar-brand:hover {
     color: var(--third-bis-color);
+    transform: rotateY(360deg) !important;
 }
 
 .nav-link:hover {
@@ -331,7 +336,6 @@ html {
 /* Cards -  Estilo para la tarjeta */
 .card {
     margin: 1em;
-    width: 100%;
     background-color: lightgray;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -348,6 +352,7 @@ html {
     padding: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin: 0px !important;
 }
 
 .card:hover {
@@ -385,6 +390,8 @@ html {
     font-size: medium;
     text-align: center;
     font-weight: bold;
+    margin-top: 0px !important;
+
 }
 
 
@@ -411,12 +418,12 @@ html {
 
 .cardModal {
     margin: 1em;
-    --width: 100%;
+    width: 100%;
     border: 1rem;
     /* Cambiamos esto a 80% para móviles */
     background-color: var(--bg-color);
     border-radius: 5px;
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .fcontacto {
@@ -429,36 +436,18 @@ html {
     padding-left: 30px;
 }
 
-/* input {
-    background-color: #fbfbfb;
-    height: 40px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #F2F2F5;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-}
 
-textarea {
-    background-color: #fbfbfb;
-    width: 405px;
-    height: 150px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #F2F2F5;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    padding-top: 15px;
+.radio-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 2%;
+    grid-template-columns: 25% 65%;
+    flex-direction: row;
+    /* Mantener la dirección del flexbox en fila por defecto */
 }
-
-label {
-    display: block;
-    float: center;
-} */
 
 #textVerde {
     color: green;
@@ -695,5 +684,13 @@ label {
     margin: 20px;
     text-align: left;
     
+}
+
+.iframeCAC {
+    border: none;
+}
+
+.text-center{
+    margin-top: 40px;
 }
 

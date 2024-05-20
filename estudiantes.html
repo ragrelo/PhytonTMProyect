@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/iconos/favicon-32x32.png">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ico/favicon-32x32.png">
+
     <!-- font-awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -30,39 +30,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-    <title>Task Manager</title>
+    <title>Task Manager | Integrantes</title>
 </head>
 
 <body>
     <header>
-        <section>
-            <div>
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">
-                            <img src="./img/descarga.png" width="90" height="55" alt="Logo">
-                            <span class="titlePage">Task Manager - TP</span> </a>
-                        <!-- <div class="titlePage" id="menu">Hola <span id="nombre"></span></div> -->
-                        <div class=" navbar-toggler-right">
-                            <div class="navbar-nav me-2">
-                                <span><a class="nav-link" href="./index.html">Inicio</a></span>
-                                <span><a class="nav-link" href="./ayuda.html">Ayuda</a></span>
-                                <span id="sesionEstado"></span>
-                            </div>
+        <div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./img/descarga.png" width="90" height="55" alt="descarga">
+                        <span class="titlePage">Task Manager - TP</span> </a>
+                    <!-- <div class="titlePage" id="menu">Hola <span id="nombre"></span></div> -->
+                    <div class=" navbar-toggler-right">
+                        <div class="navbar-nav me-2">
+                            <span><a class="nav-link" href="./index.html">Inicio</a></span>
+                            <span><a class="nav-link" href="./ayuda.html">Ayuda</a></span>
+                            <span id="sesionEstado"></span>
                         </div>
                     </div>
-                </nav>
-            </div>
-        </section>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         <header class="text-center">
             <h1>Task Manager</h1>
-            <h3>Organizador de tareas para equipos</h3>
+            <h4>Organizador de tareas para equipos</h4>
         </header>
         <br>
         <section class="centrar">
-            <h1 class="titulo">Integrantes</h1>
+            <h2 class="titulo">Integrantes</h2>
             <div class="">
                 <h2 class="integrantes">Conrado Giacosa</h2>
                 <h2 class="integrantes">Florencia Rojas</h2>
@@ -81,13 +79,14 @@
     <script src="./js/sesiones.js"></script>
     <!-- Datos -->
     <script src="./js/usuarios.js"></script>
+    <!-- Terminos y condiciones -->
+    <script src="./js/terms.js"></script>
     <script>
         $(window).on('load', function () {
             actualizarEstadoSesion();
         });
     </script>
-    <!-- Terminos y condiciones -->
-    <script src="./js/terms.js"></script>
+
 </body>
 
 </html>

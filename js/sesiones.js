@@ -14,7 +14,7 @@ function mostrarNombre() {
     var nombre = localStorage.getItem('nombre');
     if (!nombre) {
         nombre = 'debe iniciar sesión para poder operar'
-    }
+    };
     document.getElementById('nombre').textContent = nombre;
 };
 
@@ -28,7 +28,7 @@ function actualizarEstadoSesion() {
     } else {
         // Si el usuario no está logueado, muestra el enlace de login
         sesionEstado.innerHTML = '<a class="nav-link" href="./login.html">Login</a>';
-    }
+    };
 };
 
 function logout() {
@@ -49,17 +49,9 @@ function registerUser(username, usuarios) {
     localStorage.setItem('users', JSON.stringify(usuarios));
 
     // Recuperar los usuarios de localStorage
-    //var usuarios = JSON.parse(localStorage.getItem('users'));
-
-    // Agregar un nuevo usuario
-    //usuarios.push([5, 'NuevoUsuario']);
-
-    // Guardar los usuarios actualizados en localStorage
-    //localStorage.setItem('users', JSON.stringify(usuarios)); 
-
-    // Recuperar los usuarios de localStorage
     var storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    console.log(storedUsers)
+    console.log(storedUsers);
+
     // Encuentra el ID más alto entre los usuarios existentes
     var maxId = Math.max(...storedUsers.map(user => user[0]), 0);
 
@@ -71,7 +63,4 @@ function registerUser(username, usuarios) {
 
     // Guarda los usuarios actualizados en localStorage
     localStorage.setItem('users', JSON.stringify(storedUsers));
-}
-
-// Uso de la función
-//registerUser('NuevoUsuario');
+};

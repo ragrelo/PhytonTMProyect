@@ -17,6 +17,10 @@
     font-weight: 900;
 }
 
+.registerForm {
+    width: 500px !important;
+}
+
 form {
     background-color: #f9f9f9;
     padding: 20px;
@@ -27,10 +31,11 @@ form {
     margin: auto;
 }
 
+
 button,
 input,
 select,
-textarea, 
+textarea,
 label {
     font-family: "Roboto", sans-serif;
     font-size: 100%;
@@ -43,7 +48,7 @@ label {
 }
 
 input,
-textarea, 
+textarea,
 select {
     width: 100%;
     padding: 10px;
@@ -205,11 +210,11 @@ input[type="submit"]:hover {
         width: 70%;
         align-self: center;
         max-width: 70%;
-        order: -1; 
+        order: -1;
     }
 
     .datos-intro-cac {
-        align-items: center; 
+        align-items: center;
         text-align: center;
         margin: 3%;
     }

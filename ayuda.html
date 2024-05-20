@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ico/favicon-32x32.png">
 
     <!-- font-awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -26,30 +26,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         data-mutate-approach="sync"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Task Manager</title>
+    <title>Task Manager | Preguntas Frecuentes</title>
 </head>
 
 <body>
     <header>
-        <section>
-            <div>
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">
-                            <img src="./img/descarga.png" width="90" height="55" alt="Logo">
-                            <span class="titlePage">Task Manager - TP</span> </a>
-                        <!-- <div class="titlePage" id="menu">Hola <span id="nombre"></span></div> -->
-                        <div class=" navbar-toggler-right">
-                            <div class="navbar-nav me-2">
-                                <span><a class="nav-link" href="./index.html">Inicio</a></span>
-                                <span><a class="nav-link" href="./ayuda.html">Ayuda</a></span>
-                                <span id="sesionEstado"></span>
-                            </div>
+        <div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./img/descarga.png" width="90" height="55" alt="descarga">
+                        <span class="titlePage">Task Manager - TP</span> </a>
+                    <!-- <div class="titlePage" id="menu">Hola <span id="nombre"></span></div> -->
+                    <div class=" navbar-toggler-right">
+                        <div class="navbar-nav me-2">
+                            <span><a class="nav-link" href="./index.html">Inicio</a></span>
+                            <span><a class="nav-link" href="./ayuda.html">Ayuda</a></span>
+                            <span id="sesionEstado"></span>
                         </div>
                     </div>
-                </nav>
-            </div>
-        </section>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
 
@@ -68,20 +66,19 @@
                         necesitan realizar.</p>
                     <br>
                     <ol>
-                        <!--en esta parte nose si poner imagenes o hacer un boton que no haga nada pero sirva como ejemplo -->
                         <li>
                             <p> 1) Para empezar, simplemente presiona el botón
                                 'Crear Tarea'. <br>
                             <div>
-                                <img class="img" src="./img/imagen2tp_Mesa de trabajo 1.png" alt="">
+                                <img class="img" src="./img/imagen2tp.png" alt="boton crear tarea">
                             </div>
                             <br>
-                            <!--queria poner mas imagenes pero me falta esa parte de la web que no puedo ver-->
-                            Luego podrás ingresar un título y
-                            una
-                            descripción de la tarea que estás asignando o
-                            que
-                            necesitas realizar.<br>
+                            <p>
+                                Luego podrás ingresar un título y
+                                una
+                                descripción de la tarea que estás asignando o
+                                que
+                                necesitas realizar.<br>
                             </p>
                         </li>
                         <li>
@@ -115,26 +112,24 @@
                         sencillos pasos: </p>
                     <ol>
                         <li>1) Dirígete al menú y selecciona la opción
-                            'Login'.</li>
-                        <br>
-                        <div>
-                            <img class="img" src="./img/imagen3tp_Mesa de trabajo 1_Mesa de trabajo 1.png" alt="">
-                        </div>
-
+                            'Login'.
+                        </li>
+                        <li>
+                            <img class="img" src="./img/imagen3tp.png" alt="imagen login">
+                        </li>
                         <li>2) En la página de inicio de sesión, haz clic en
                             'Registro'.
                             <br>
                             <div>
-                                <img class="img" src="./img/imagen4tp_Mesa de trabajo 1.png" alt="">
+                                <img class="img" src="./img/imagen4tp.png" alt="imagen registro">
                             </div>
                             <br>
                             Esto te llevará directamente a un
                             formulario de registro.
                         </li>
-                        <div>
-                            <img class="img" src="./img/imagen5tp_Mesa de trabajo 1.png" alt="">
-
-                        </div>
+                        <li>
+                            <img class="img" src="./img/imagen5tp.png" alt="imagen formulario de registro">
+                        </li>
                         <li>3) Completa el formulario con tus datos y una vez
                             aceptado, regresa a la sección de login.</li>
                         <li>4) Ingresa tu nombre de usuario y contraseña en los
@@ -195,6 +190,8 @@
     <script src="./js/sesiones.js"></script>
     <!-- Datos -->
     <script src="./js/usuarios.js"></script>
+    <!-- Terminos y condiciones -->
+    <script src="./js/terms.js"></script>
     <script>
         $(window).on('load', function () {
             actualizarEstadoSesion();
@@ -214,8 +211,7 @@
             });
         });
     </script>
-    <!-- Terminos y condiciones -->
-    <script src="./js/terms.js"></script>
+
 </body>
 
 </html>
